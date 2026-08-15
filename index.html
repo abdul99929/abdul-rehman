@@ -915,7 +915,7 @@
 
             <p>
                 <strong>✉</strong>
-                info@dreamywedding.com
+                info@rvibarara@gmail.com
             </p>
 
             <p>
@@ -1003,39 +1003,46 @@
                     class="form-button"
                 >
                     SEND ENQUIRY ✈
-                </button>
-
-           <script>
-
+               <script>
 function sendEnquiry(event) {
 
     event.preventDefault();
 
-    const name =
-        document.getElementById("name").value;
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const date = document.getElementById("date").value;
+    const location = document.getElementById("location").value.trim();
+    const decoration = document.getElementById("decoration").value;
+    const packageName = document.getElementById("package").value;
+    const message = document.getElementById("message").value.trim();
 
-    const phone =
-        document.getElementById("phone").value;
+    // Website owner's WhatsApp number
+    const whatsappNumber = "919992959769";
 
-    const date =
-        document.getElementById("date").value;
+    const whatsappMessage =
+        "🌸 DREAMY WEDDING ENQUIRY 🌸\n\n" +
+        "👤 Name: " + name + "\n" +
+        "📞 Customer Phone: " + phone + "\n" +
+        "📅 Wedding Date: " + date + "\n" +
+        "📍 Event Location: " + location + "\n" +
+        "🌸 Decoration: " + decoration + "\n" +
+        "💎 Package: " + packageName + "\n" +
+        "💬 Message: " + message;
 
-    const location =
-        document.getElementById("location").value;
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(whatsappMessage);
 
-    const decoration =
-        document.getElementById("decoration").value;
-
-    const packageName =
-        document.getElementById("package").value;
-
-    const message =
-        document.getElementById("message").value;
+    window.location.href = whatsappURL;
+}
+</script>
 
 
     /* Dreamy Wedding WhatsApp Number */
 
-    const whatsappNumber = "919992959769";
+    const whatsappNumber = "919817779648";
 
 
     /* WhatsApp Message */
