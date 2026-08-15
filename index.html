@@ -1005,8 +1005,78 @@
                     SEND ENQUIRY ✈
                 </button>
 
-            <form onsubmit="sendEnquiry(event)">
+           <script>
 
+function sendEnquiry(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value;
+
+    const phone =
+        document.getElementById("phone").value;
+
+    const date =
+        document.getElementById("date").value;
+
+    const location =
+        document.getElementById("location").value;
+
+    const decoration =
+        document.getElementById("decoration").value;
+
+    const packageName =
+        document.getElementById("package").value;
+
+    const message =
+        document.getElementById("message").value;
+
+
+    /* Dreamy Wedding WhatsApp Number */
+
+    const whatsappNumber = "919992959769";
+
+
+    /* WhatsApp Message */
+
+    const whatsappMessage =
+        "🌸 DREAMY WEDDING ENQUIRY 🌸\n\n" +
+
+        "👤 Name: " + name + "\n" +
+
+        "📞 Phone: " + phone + "\n" +
+
+        "📅 Wedding Date: " + date + "\n" +
+
+        "📍 Event Location: " + location + "\n" +
+
+        "🌸 Decoration: " + decoration + "\n" +
+
+        "💎 Package: " + packageName + "\n" +
+
+        "💬 Message: " + message;
+
+
+    /* WhatsApp URL */
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(whatsappMessage);
+
+
+    /* Open WhatsApp */
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
         </div>
 
     </div>
