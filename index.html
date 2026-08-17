@@ -1,639 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dreamy Decoration | Ambala</title>
+    <title>Dreamy Decoration | Ambala</title>
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-html{
-  scroll-behavior:smooth;
-}
+        body {
+            color: #333;
+            background: #fff;
+        }
 
-body{
-  font-family:Arial, sans-serif;
-  background:#fff8fb;
-  color:#35232b;
-  line-height:1.6;
-}
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=2000&q=85");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
 
-/* HEADER */
-header{
-  background:#fff;
-  padding:18px 7%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 3px 15px rgba(0,0,0,.08);
-}
+        .hero-content {
+            max-width: 850px;
+        }
 
-.logo{
-  font-size:25px;
-  font-weight:bold;
-  color:#e13b78;
-}
+        .hero h1 {
+            font-size: 65px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
 
-.logo span{
-  color:#f4a62a;
-}
+        .hero h2 {
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
 
-nav a{
-  text-decoration:none;
-  color:#35232b;
-  margin-left:18px;
-  font-weight:bold;
-}
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
 
-/* HERO */
-.hero{
-  min-height:570px;
-  padding:70px 7%;
-  display:flex;
-  align-items:center;
-  gap:45px;
-  background:linear-gradient(135deg,#ffe0ed,#fff0c8);
-}
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            margin: 7px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-.hero-text{
-  flex:1;
-}
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
 
-.hero h1{
-  font-size:clamp(42px,7vw,70px);
-  line-height:1.05;
-  color:#d82f6c;
-}
+        .call {
+            background: #e91e63;
+        }
 
-.hero p{
-  font-size:19px;
-  margin:22px 0;
-}
+        .whatsapp {
+            background: #25D366;
+        }
 
-.btn{
-  display:inline-block;
-  padding:14px 24px;
-  margin:5px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  color:white;
-  background:#e13b78;
-}
+        .instagram {
+            background: #C13584;
+        }
 
-.btn.gold{
-  background:#eea329;
-}
+        .email {
+            background: #555;
+        }
 
-.hero-art{
-  flex:1;
-  min-height:350px;
-  border-radius:35px;
-  background:linear-gradient(145deg,#eaa9c4,#f9d486);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:100px;
-  box-shadow:0 20px 40px rgba(210,50,110,.20);
-}
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111;
+            text-align: center;
+            padding: 15px;
+        }
 
-/* SECTIONS */
-section{
-  padding:70px 7%;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
 
-.title{
-  text-align:center;
-  color:#d82f6c;
-  font-size:36px;
-  margin-bottom:40px;
-}
+        nav a:hover {
+            color: #ff4081;
+        }
 
-/* SERVICES */
-.services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:22px;
-}
+        /* GENERAL */
+        section {
+            padding: 70px 8%;
+        }
 
-.card{
-  background:white;
-  padding:28px;
-  text-align:center;
-  border-radius:22px;
-  box-shadow:0 8px 25px rgba(0,0,0,.07);
-  transition:.3s;
-}
+        .section-title {
+            text-align: center;
+            font-size: 38px;
+            margin-bottom: 15px;
+            color: #222;
+        }
 
-.card:hover{
-  transform:translateY(-7px);
-}
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 45px;
+            color: #666;
+        }
 
-.icon{
-  font-size:48px;
-}
+        /* ABOUT */
+        .about {
+            text-align: center;
+            background: #fff7fa;
+        }
 
-.card h3{
-  margin:12px 0;
-  color:#d82f6c;
-}
+        .about p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
 
-/* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
+        /* PACKAGES */
+        .packages {
+            background: #fff;
+        }
 
-.gallery-item{
-  height:210px;
-  border-radius:22px;
-  background:linear-gradient(135deg,#ffd1e2,#ffe4a9);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:65px;
-}
+        .package-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
 
-/* INQUIRY */
-.inquiry{
-  background:#fff0f5;
-}
+        .package {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+            text-align: center;
+            transition: 0.3s;
+            border-top: 4px solid #e91e63;
+        }
 
-.form{
-  max-width:650px;
-  margin:auto;
-  background:white;
-  padding:30px;
-  border-radius:25px;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
+        .package:hover {
+            transform: translateY(-8px);
+        }
 
-.form input,
-.form select,
-.form textarea{
-  width:100%;
-  padding:14px;
-  margin:8px 0;
-  border:1px solid #ddd;
-  border-radius:12px;
-  font-size:16px;
-}
+        .package h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+            color: #e91e63;
+        }
 
-.form textarea{
-  min-height:120px;
-  resize:vertical;
-}
+        .package ul {
+            list-style: none;
+            line-height: 2;
+            color: #555;
+        }
 
-.form button{
-  width:100%;
-  padding:15px;
-  border:none;
-  border-radius:30px;
-  background:#e13b78;
-  color:white;
-  font-size:17px;
-  font-weight:bold;
-  cursor:pointer;
-}
+        .package li::before {
+            content: "✓ ";
+            color: #e91e63;
+            font-weight: bold;
+        }
 
-/* CONTACT */
-.contact{
-  background:#38242c;
-  color:white;
-  text-align:center;
-}
+        /* GALLERY */
+        .gallery {
+            background: #f8f8f8;
+        }
 
-.contact .title{
-  color:#ffd4e4;
-}
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
 
-.contact p{
-  margin:10px;
-  font-size:18px;
-}
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
 
-.contact a{
-  color:#ffd4e4;
-  text-decoration:none;
-  font-weight:bold;
-}
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
 
-/* FOOTER */
-footer{
-  background:#24171d;
-  color:white;
-  text-align:center;
-  padding:22px;
-}
+        /* CONTACT */
+        .contact {
+            background:
+                linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url("https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=2000&q=85");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
 
-/* MOBILE */
-@media(max-width:750px){
+        .contact .section-title {
+            color: white;
+        }
 
-  nav{
-    display:none;
-  }
+        .contact-details {
+            margin: 30px auto;
+            max-width: 600px;
+            font-size: 19px;
+            line-height: 2;
+        }
 
-  .hero{
-    flex-direction:column;
-    text-align:center;
-  }
+        /* FOOTER */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
 
-  .hero-art{
-    width:100%;
-    min-height:250px;
-  }
+        footer span {
+            color: #ff4081;
+        }
 
-  .services,
-  .gallery{
-    grid-template-columns:1fr;
-  }
-}
-</style>
+        /* MOBILE */
+        @media (max-width: 900px) {
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .package-container,
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 7px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-
-  <div class="logo">
-    🎈 Dreamy <span>Decoration</span>
-  </div>
-
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#inquiry">Inquiry</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-</header>
-
-
-<!-- HERO -->
-<section class="hero" id="home">
-
-  <div class="hero-text">
-
-    <h1>
-      Making Every Celebration Beautiful ✨
-    </h1>
-
-    <p>
-      Dreamy Decoration provides beautiful and creative
-      decorations for weddings, birthdays, parties,
-      homes and every special occasion.
-    </p>
-
-    <p>
-      📍 Serving Ambala and nearby areas
-    </p>
-
-    <a href="#services" class="btn">
-      Explore Decorations
-    </a>
-
-    <a href="#inquiry" class="btn gold">
-      Send Inquiry
-    </a>
-
-  </div>
-
-  <div class="hero-art">
-    🎈🌸💐🎉
-  </div>
-
-</section>
-
-
-<!-- SERVICES -->
-<section id="services">
-
-<h2 class="title">
-  Our Decoration Services
-</h2>
-
-<div class="services">
-
-  <div class="card">
-    <div class="icon">💍</div>
-    <h3>Wedding Decoration</h3>
-    <p>Beautiful wedding decoration for your special day.</p>
-  </div>
+    <!-- HERO -->
+    <header class="hero">
 
-  <div class="card">
-    <div class="icon">🎈</div>
-    <h3>Balloon Decoration</h3>
-    <p>Creative balloon themes for every celebration.</p>
-  </div>
+        <div class="hero-content">
 
-  <div class="card">
-    <div class="icon">🏠</div>
-    <h3>House Decoration</h3>
-    <p>Beautiful decoration for homes and special events.</p>
-  </div>
+            <h1>Dreamy Decoration</h1>
 
-  <div class="card">
-    <div class="icon">🎂</div>
-    <h3>Birthday Decoration</h3>
-    <p>Fun and colourful birthday decoration themes.</p>
-  </div>
+            <h2>Make Your Celebration Beautiful & Memorable</h2>
 
-  <div class="card">
-    <div class="icon">🌸</div>
-    <h3>Floral Decoration</h3>
-    <p>Elegant floral decoration according to your theme.</p>
-  </div>
+            <p>
+                Professional Home, Birthday, Balloon, Wedding
+                and Event Decoration Services in Ambala.
+            </p>
 
-  <div class="card">
-    <div class="icon">💃</div>
-    <h3>Mehndi Decoration</h3>
-    <p>Beautiful and colourful Mehndi setups.</p>
-  </div>
+            <a href="tel:9817779648" class="btn call">
+                📞 Call Now
+            </a>
 
-  <div class="card">
-    <div class="icon">🌼</div>
-    <h3>Haldi Decoration</h3>
-    <p>Bright and traditional Haldi decoration.</p>
-  </div>
-
-  <div class="card">
-    <div class="icon">💎</div>
-    <h3>Engagement Decoration</h3>
-    <p>Elegant decoration for your engagement ceremony.</p>
-  </div>
-
-  <div class="card">
-    <div class="icon">👶</div>
-    <h3>Baby Shower</h3>
-    <p>Cute and beautiful baby shower decoration.</p>
-  </div>
-
-  <div class="card">
-    <div class="icon">🎉</div>
-    <h3>Anniversary Decoration</h3>
-    <p>Romantic decoration for memorable anniversaries.</p>
-  </div>
-
-  <div class="card">
-    <div class="icon">🎊</div>
-    <h3>Party Decoration</h3>
-    <p>Fun decoration for parties and celebrations.</p>
-  </div>
-
-  <div class="card">
-    <div class="icon">✨</div>
-    <h3>Custom Decoration</h3>
-    <p>Tell us your idea and we will create it.</p>
-  </div>
-
-</div>
-
-</section>
-
-
-<!-- GALLERY -->
-<section id="gallery">
-
-<h2 class="title">
-  Our Gallery 📸
-</h2>
-
-<div class="gallery">
+            <a href="https://wa.me/919817779648?text=Hello%20Dreamy%20Decoration,%20I%20want%20to%20know%20about%20your%20decoration%20packages."
+               class="btn whatsapp"
+               target="_blank">
+                💬 WhatsApp
+            </a>
 
-  <div class="gallery-item">🎈💐</div>
-  <div class="gallery-item">🏠🌸</div>
-  <div class="gallery-item">💍🌺</div>
-  <div class="gallery-item">🎂🎈</div>
-  <div class="gallery-item">🌼💃</div>
-  <div class="gallery-item">🎉✨</div>
+            <a href="https://www.instagram.com/ravi_chanaliya_1/"
+               class="btn instagram"
+               target="_blank">
+                📸 Instagram
+            </a>
 
-</div>
-
-<p style="text-align:center;margin-top:20px;">
-  Real decoration photos can be added here.
-</p>
-
-</section>
+        </div>
 
+    </header>
 
-<!-- INQUIRY -->
-<section class="inquiry" id="inquiry">
-
-<h2 class="title">
-  Send an Inquiry 📝
-</h2>
-
-<div class="form">
-
-<form onsubmit="sendInquiry(event)">
-
-  <input
-    type="text"
-    id="name"
-    placeholder="Your Name"
-    required
-  >
-
-  <input
-    type="tel"
-    id="phone"
-    placeholder="Your Phone Number"
-    required
-  >
-
-  <select id="decoration" required>
-
-    <option value="">
-      Select Decoration
-    </option>
-
-    <option>Wedding Decoration</option>
-    <option>Balloon Decoration</option>
-    <option>House Decoration</option>
-    <option>Birthday Decoration</option>
-    <option>Floral Decoration</option>
-    <option>Mehndi Decoration</option>
-    <option>Haldi Decoration</option>
-    <option>Engagement Decoration</option>
-    <option>Baby Shower</option>
-    <option>Anniversary Decoration</option>
-    <option>Party Decoration</option>
-    <option>Custom Decoration</option>
-
-  </select>
-
-  <input
-    type="date"
-    id="eventDate"
-    required
-  >
-
-  <input
-    type="text"
-    id="location"
-    placeholder="Event Location"
-    required
-  >
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-  <textarea
-    id="message"
-    placeholder="Tell us about your decoration requirements"
-  ></textarea>
+    <!-- ABOUT -->
+    <section class="about" id="about">
 
-  <button type="submit">
-    Send Inquiry on WhatsApp
-  </button>
+        <h2 class="section-title">About Dreamy Decoration</h2>
 
-</form>
+        <p class="section-subtitle">
+            Turning your special moments into beautiful memories
+        </p>
 
-</div>
+        <p>
+            Welcome to <strong>Dreamy Decoration</strong>.
+            We provide creative and beautiful decoration services
+            for birthdays, weddings, anniversaries, home celebrations,
+            baby showers and other special occasions in Ambala.
+        </p>
 
-</section>
+        <br>
 
+        <p>
+            Our goal is to make every celebration look elegant,
+            colorful and memorable with beautiful decoration themes.
+        </p>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
+    </section>
 
-<h2 class="title">
-  Contact Dreamy Decoration
-</h2>
 
-<p>
-  👤 Owner: Abdul
-</p>
+    <!-- PACKAGES -->
+    <section class="packages" id="packages">
 
-<p>
-  📞 Phone: 9992959769
-</p>
+        <h2 class="section-title">Our Decoration Packages</h2>
 
-<p>
-  📱 WhatsApp: 9992959769
-</p>
+        <p class="section-subtitle">
+            Choose the decoration style for your special occasion
+        </p>
 
-<p>
-  📍 Location: Ambala
-</p>
+        <div class="package-container">
 
-<p>
-  📧 Email:
-  <a href="mailto:Abdul250398@gmail.com">
-    Abdul250398@gmail.com
-  </a>
-</p>
+            <div class="package">
+                <h3>🎈 Birthday Decoration</h3>
 
-<p>
-  📸 Instagram:
-  <a
-    href="https://www.instagram.com/therehmanabdul1"
-    target="_blank"
-  >
-    @therehmanabdul1
-  </a>
-</p>
+                <ul>
+                    <li>Balloon Decoration</li>
+                    <li>Birthday Backdrop</li>
+                    <li>LED Lights</li>
+                    <li>Theme Decoration</li>
+                    <li>Cake Table Decoration</li>
+                </ul>
 
-<br>
+                <br>
 
-<a
-  href="https://wa.me/919992959769"
-  class="btn gold"
-  target="_blank"
->
-  WhatsApp Us
-</a>
+                <a href="https://wa.me/919817779648?text=Hello,%20I%20am%20interested%20in%20Birthday%20Decoration."
+                   class="btn whatsapp"
+                   target="_blank">
+                    Enquire Now
+                </a>
+            </div>
 
-<a
-  href="tel:+919992959769"
-  class="btn"
->
-  Call Us
-</a>
 
-</section>
+            <div class="package">
+                <h3>💍 Wedding Decoration</h3>
+
+                <ul>
+                    <li>Wedding Stage Decoration</li>
+                    <li>Floral Decoration</li>
+                    <li>Entry Decoration</li>
+                    <li>Lighting Decoration</li>
+                    <li>Wedding Theme Setup</li>
+                </ul>
 
+                <br>
 
-<!-- FOOTER -->
-<footer>
+                <a href="https://wa.me/919817779648?text=Hello,%20I%20am%20interested%20in%20Wedding%20Decoration."
+                   class="btn whatsapp"
+                   target="_blank">
+                    Enquire Now
+                </a>
+            </div>
 
-  © 2026 Dreamy Decoration
-  <br>
-  Making Every Celebration Beautiful ✨
-  <br>
-  Ambala
 
-</footer>
+            <div class="package">
+                <h3>🏠 Home Decoration</h3>
 
+                <ul>
+                    <li>Room Decoration</li>
+                    <li>Balloon Decoration</li>
+                    <li>Wall Decoration</li>
+                    <li>Fairy Lights</li>
+                    <li>Special Theme Setup</li>
+                </ul>
 
-<!-- WHATSAPP INQUIRY SCRIPT -->
-<script>
+                <br>
 
-function sendInquiry(event){
+                <a href="https://wa.me/919817779648?text=Hello,%20I%20am%20interested%20in%20Home%20Decoration."
+                   class="btn whatsapp"
+                   target="_blank">
+                    Enquire Now
+                </a>
+            </div>
 
-  event.preventDefault();
 
-  const name =
-    document.getElementById("name").value;
+            <div class="package">
+                <h3>🌸 Anniversary Decoration</h3>
 
-  const phone =
-    document.getElementById("phone").value;
+                <ul>
+                    <li>Romantic Decoration</li>
+                    <li>Balloon Setup</li>
+                    <li>Flower Decoration</li>
+                    <li>LED & Fairy Lights</li>
+                    <li>Special Backdrop</li>
+                </ul>
 
-  const decoration =
-    document.getElementById("decoration").value;
+                <br>
 
-  const eventDate =
-    document.getElementById("eventDate").value;
+                <a href="https://wa.me/919817779648?text=Hello,%20I%20am%20interested%20in%20Anniversary%20Decoration."
+                   class="btn whatsapp"
+                   target="_blank">
+                    Enquire Now
+                </a>
+            </div>
 
-  const location =
-    document.getElementById("location").value;
 
-  const message =
-    document.getElementById("message").value;
+            <div class="package">
+                <h3>👶 Baby Shower</h3>
 
-  /* Dreamy Decoration WhatsApp number */
+                <ul>
+                    <li>Baby Shower Theme</li>
+                    <li>Balloon Decoration</li>
+                    <li>Welcome Board</li>
+                    <li>Flower Decoration</li>
+                    <li>Photo Backdrop</li>
+                </ul>
 
-  const whatsappNumber =
-    "919992959769";
+                <br>
 
-  const text =
-    "🌸 NEW DECORATION INQUIRY 🌸\n\n" +
+                <a href="https://wa.me/919817779648?text=Hello,%20I%20am%20interested%20in%20Baby%20Shower%20Decoration."
+                   class="btn whatsapp"
+                   target="_blank">
+                    Enquire Now
+                </a>
+            </div>
 
-    "Name: " + name + "\n" +
 
-    "Customer Phone: " + phone + "\n" +
+            <div class="package">
+                <h3>✨ Event Decoration</h3>
 
-    "Decoration: " + decoration + "\n" +
+                <ul>
+                    <li>Event Stage Decoration</li>
+                    <li>Balloon Decoration</li>
+                    <li>Floral Setup</li>
+                    <li>Lighting Setup</li>
+                    <li>Custom Theme</li>
+                </ul>
 
-    "Event Date: " + eventDate + "\n" +
+                <br>
 
-    "Event Location: " + location + "\n" +
+                <a href="https://wa.me/919817779648?text=Hello,%20I%20am%20interested%20in%20Event%20Decoration."
+                   class="btn whatsapp"
+                   target="_blank">
+                    Enquire Now
+                </a>
+            </div>
 
-    "Message: " + message;
+        </div>
 
-  const whatsappURL =
-    "https://wa.me/" +
-    whatsappNumber +
-    "?text=" +
-    encodeURIComponent(text);
+    </section>
 
-  window.open(
-    whatsappURL,
-    "_blank"
-  );
 
-}
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
 
-</script>
+        <h2 class="section-title">Decoration Ideas</h2>
+
+        <p class="section-subtitle">
+            Beautiful decoration inspiration for your special day
+        </p>
+
+        <div class="gallery-container">
+
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=85"
+                 alt="Wedding Decoration">
+
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=85"
+                 alt="Birthday Decoration">
+
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85"
+                 alt="Event Decoration">
+
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=900&q=85"
+                 alt="Wedding Event">
+
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=85"
+                 alt="Party Decoration">
+
+            <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=85"
+                 alt="Celebration Decoration">
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact Dreamy Decoration</h2>
+
+        <p class="section-subtitle" style="color:white;">
+            Let's make your celebration beautiful!
+        </p>
+
+        <div class="contact-details">
+
+            <p><strong>👤 Owner:</strong> Ravi Kumar</p>
+
+            <p><strong>📍 Location:</strong> Ambala, Haryana</p>
+
+            <p>
+                <strong>📞 Phone:</strong>
+                <a href="tel:9817779648" style="color:white;">
+                    9817779648
+                </a>
+            </p>
+
+            <p>
+                <strong>📧 Email:</strong>
+                <a href="mailto:rvikumar@gmail.com" style="color:white;">
+                    rvikumar@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <strong>📸 Instagram:</strong>
+                <a href="https://www.instagram.com/ravi_chanaliya_1/"
+                   target="_blank"
+                   style="color:white;">
+                    @ravi_chanaliya_1
+                </a>
+            </p>
+
+        </div>
+
+
+        <a href="tel:9817779648" class="btn call">
+            📞 Call Ravi
+        </a>
+
+        <a href="https://wa.me/919817779648?text=Hello%20Ravi,%20I%20want%20to%20book%20a%20decoration."
+           class="btn whatsapp"
+           target="_blank">
+            💬 WhatsApp Inquiry
+        </a>
+
+        <a href="mailto:rvikumar@gmail.com" class="btn email">
+            📧 Send Email
+        </a>
+
+        <a href="https://www.instagram.com/ravi_chanaliya_1/"
+           class="btn instagram"
+           target="_blank">
+            📸 Follow Instagram
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 <span>Dreamy Decoration</span> |
+            Ambala, Haryana
+        </p>
+
+        <p>
+            Designed for beautiful celebrations ❤️
+        </p>
+
+    </footer>
 
 </body>
 </html>
